@@ -3,6 +3,6 @@ import React from 'react'
 
 import Header from './Header'
 
-const App = () => <h1>Hello World!</h1>
+const App = () => <Header />
 
 export default App
