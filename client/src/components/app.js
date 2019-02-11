@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-filename-extension */
-import React from 'react';
+import React from 'react'
 
-const App = () => <h1>hello</h1>;
+import Header from './Header'
 
-export default App;
+const App = () => <h1>Hello World!</h1>
+
+export default App
