@@ -7,4 +7,10 @@ describe('Homepage', () => {
     cy.visit('/')
     cy.contains('Makers BnB')
   })
+
+  it('can navigate to spaces', () => {
+    cy.visit('/')
+    cy.contains('Spaces').click()
+    // cy.url().should('include', '/spaces')
+  })
 })
