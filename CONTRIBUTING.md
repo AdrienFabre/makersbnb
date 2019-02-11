@@ -4,7 +4,7 @@ Do not modify the`master` branch directly. You can only merge to it.
 
 ## Starting a New Feature
 
-- Make a new branch from `dev`: `git checkout -b branch-name`
+- Make a new branch from **inside** `dev`: `git checkout -b branch-name`
 - Always rebase your branch to update it with the latest changes from `dev`: `git pull origin dev --rebase`
 - Now you can make changes
 - Once changes are commited, push them: `git push origin branch-name`
