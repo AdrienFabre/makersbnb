@@ -2,6 +2,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const Spaces = () => <h1>listings</h1>
+const Spaces = () => <h2>Book a Space</h2>
 
 export default Spaces
