@@ -11,6 +11,6 @@ describe('Homepage', () => {
   it('can navigate to spaces', () => {
     cy.visit('/')
     cy.contains('Spaces').click()
-    // cy.url().should('include', '/spaces')
+    cy.url().should('include', '/spaces')
   })
 })
