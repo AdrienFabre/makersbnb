@@ -3,5 +3,14 @@
   "version": "0.0.0",
   "main": "index.js",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "script": {
+    "test": "yarn jasmine"
+  },
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "jasmine": "^3.3.1"
+  }
 }
