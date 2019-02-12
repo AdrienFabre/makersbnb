@@ -12,5 +12,8 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
     "jasmine": "^3.3.1"
+  },
+  "dependencies": {
+    "graphql-yoga": "^1.17.4"
   }
 }
