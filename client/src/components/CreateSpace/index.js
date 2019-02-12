@@ -3,6 +3,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 
+const PageContainer = styled.div`
+  max-width: 600px;
+  padding: 20px;
+  margin: 0 auto;
+`
+
 const PageTitle = props => (
   <div className={props.className}>
     <h2>{props.title}</h2>
@@ -12,10 +18,58 @@ const PageTitle = props => (
 
 const StyledPageTitle = styled(PageTitle)``
 
+const Form = props => (
+  <div className={props.className}>
+    <form action="">
+      <label>Name:</label>
+      <input type="text" name="name" />
+      <label>Description:</label>
+      <textarea name="description" id="" cols="30" rows="10" />
+      <label>Price Per Night:</label>
+      <input type="number" name="price-per-night" />
+      <label>Available From:</label>
+      <input type="date" name="start-date" />
+      <label>Available Until:</label>
+      <input type="date" name="end-date" />
+      <input type="submit" value="Submit" />
+    </form>
+  </div>
+)
+
+const StyledForm = styled(Form)`
+  label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #f4f5f7;
+  }
+
+  input[type='submit'] {
+    background-color: palevioletred;
+    color: white;
+    width: 100%;
+  }
+`
+
 const CreateSpace = () => (
   <React.Fragment>
     <StyledPageTitle title="List a Space" description="A description" />
+    <PageContainer>
+      <StyledForm />
+    </PageContainer>
   </React.Fragment>
 )
-
 export default CreateSpace
+
+const ListingContainer = styled.div``
