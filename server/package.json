@@ -4,13 +4,22 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
-  "script": {
-    "test": "yarn jasmine"
+  "scripts": {
+    "test": "yarn jasmine",
+    "start:dev": "nodemon ./bin/www"
   },
   "devDependencies": {
+    "body-parser": "^1.18.3",
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
-    "jasmine": "^3.3.1"
+    "express": "^4.16.4",
+    "jasmine": "^3.3.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.10",
+    "pg": "^7.8.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.42.0",
+    "sequelize-cli": "^5.4.0"
   }
 }
