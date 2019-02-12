@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const Spaces = () => (
+const CreateSpace = () => (
   <React.Fragment>
     <h2>Book a Space</h2>
     <a href="/spaces/create">List a Space</a>
@@ -10,4 +10,4 @@ const Spaces = () => (
   </React.Fragment>
 )
 
-export default Spaces
+export default CreateSpace

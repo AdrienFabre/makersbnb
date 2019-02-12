@@ -11,6 +11,7 @@ const App = () => (
     <div>
       <Header />
       <Route path="/spaces" render={props => <Spaces />} />
+      <Route path="/spaces/create" render={props => <CreateSpace />} />
     </div>
   </BrowserRouter>
 )
