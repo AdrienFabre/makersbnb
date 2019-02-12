@@ -5,8 +5,10 @@ module.exports = {
     return spaces
       .create({
         title: req.body.title,
-        location: req.body.location,
         description: req.body.description,
+        price: req.body.price,
+        startDate: req.body.startDate,
+        endDate: req.body.endDate,
       })
       .then(spaces => res.status(201).send(spaces))
       .catch(error => res.status(400).send(error));
