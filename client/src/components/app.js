@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react'
+import '@atlaskit/css-reset'
 import { BrowserRouter, Route } from 'react-router-dom'
 
 import Header from './Header'
