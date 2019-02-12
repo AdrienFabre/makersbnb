@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-filename-extension */
-import React from 'react'
-import ReactDOM from 'react-dom'
-import styled from 'styled-components'
+import React from "react";
+import ReactDOM from "react-dom";
+import styled from "styled-components";
 
 const Nav = props => (
   <nav className={props.className}>
@@ -11,7 +11,7 @@ const Nav = props => (
       </li>
     </ul>
   </nav>
-)
+);
 
 const StyledNav = styled(Nav)`
   justify-content: flex-end;
@@ -23,6 +23,6 @@ const StyledNav = styled(Nav)`
     text-decoration: none;
     color: inherit;
   }
-`
+`;
 
-export default StyledNav
+export default StyledNav;

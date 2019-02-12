@@ -1,28 +1,50 @@
 /* eslint-disable react/jsx-filename-extension */
-import React from 'react'
-import ReactDOM from 'react-dom'
-import styled from 'styled-components'
+import React from "react";
+import ReactDOM from "react-dom";
+import styled from "styled-components";
 
 const PageContainer = styled.div`
   max-width: 600px;
   padding: 20px;
   margin: 0 auto;
-`
+`;
 
 const PageTitle = props => (
   <div className={props.className}>
     <h2>{props.title}</h2>
     <p>{props.description}</p>
   </div>
-)
+);
 
-const StyledPageTitle = styled(PageTitle)``
+const StyledPageTitle = styled(PageTitle)`
+  background-image: url("https://images.unsplash.com/photo-1495954484750-af469f2f9be5?ixlib");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-size: 8em;
+    color: white;
+  }
+
+  p {
+    color: white;
+    font-size: 1.4em;
+    margin: 2em 1em 1em;
+  }
+`;
 
 const Form = props => (
   <div className={props.className}>
     <form action="">
       <label>Name:</label>
-      <input type="text" name="name" />
+      <input type="text" name="name" id="name_input" />
       <label>Description:</label>
       <textarea name="description" id="" cols="30" rows="10" />
       <label>Price Per Night:</label>
@@ -34,7 +56,7 @@ const Form = props => (
       <input type="submit" value="Submit" />
     </form>
   </div>
-)
+);
 
 const StyledForm = styled(Form)`
   label {
@@ -55,12 +77,12 @@ const StyledForm = styled(Form)`
     border: 1px solid #f4f5f7;
   }
 
-  input[type='submit'] {
+  input[type="submit"] {
     background-color: palevioletred;
     color: white;
     width: 100%;
   }
-`
+`;
 
 const CreateSpace = () => (
   <React.Fragment>
@@ -69,7 +91,7 @@ const CreateSpace = () => (
       <StyledForm />
     </PageContainer>
   </React.Fragment>
-)
-export default CreateSpace
+);
+export default CreateSpace;
 
-const ListingContainer = styled.div``
+const ListingContainer = styled.div``;

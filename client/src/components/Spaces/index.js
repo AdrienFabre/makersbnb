@@ -97,7 +97,7 @@ const Spaces = () => (
     <StyledHero />
     <ListingContainer>
       <StyledListing
-        title="A Beautiful Relaxing Place"
+        title="A Beautiful Relaxing Space"
         description="A description, description, description, description, description."
       />
       <StyledListing
