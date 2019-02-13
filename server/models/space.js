@@ -4,7 +4,7 @@ const Sequelize = require('sequelize')
 const sequelize = new Sequelize(DATABASE_URL)
 
 module.exports = sequelize.define('space', {
-  title: {
+  name: {
     type: Sequelize.STRING
   },
   description: {
