@@ -1,18 +1,16 @@
-'use strict'
-module.exports = (sequelize, DataTypes) => {
-  const Space = sequelize.define(
-    'Space',
-    {
-      name: DataTypes.STRING,
-      description: DataTypes.STRING,
-      price: DataTypes.INTEGER,
-      startDate: DataTypes.INTEGER,
-      endDate: DataTypes.INTEGER
-    },
-    {}
-  )
-  Space.associate = function(models) {
-    // associations can be defined here
+const DATABASE_URL = require('../config.server').DATABASE_URL
+
+const Sequelize = require('sequelize')
+const sequelize = new Sequelize(DATABASE_URL)
+
+module.exports = sequelize.define('space', {
+  title: {
+    type: Sequelize.STRING
+  },
+  description: {
+    type: Sequelize.STRING
+  },
+  price: {
+    type: Sequelize.INTEGER
   }
-  return Space
-}
+})

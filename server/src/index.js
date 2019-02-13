@@ -1,13 +1,15 @@
-const DATABASE_URL = require('../config.server').DATABASE_URL
+const express = require('express')
+const app = express()
+const port = 3000
 
-const Sequelize = require('sequelize')
-const sequelize = new Sequelize(DATABASE_URL)
+const Space = require('../models/space')
 
-sequelize
-  .authenticate()
-  .then(() => {
-    console.log('Connection Established')
+app.get('/', (req, res) => res.send('Hello World!'))
+
+app.get('/api/spaces', (req, res) => {
+  Space.findAll().then(space => {
+    res.send(space)
   })
-  .catch(err => {
-    console.log('Unable to Connect')
-  })
+})
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
