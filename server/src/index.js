@@ -18,4 +18,8 @@ app.post('/api/spaces/create', (req, res) => {
   Space.create(req, res)
 })
 
+app.patch('/api/spaces/:id/update', (req, res) => {
+  Space.update(req, res)
+})
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

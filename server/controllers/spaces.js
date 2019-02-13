@@ -17,6 +17,22 @@ module.exports = {
      .findAll()
      .then(spaces => res.send(spaces))
   },
+
+  update(req, res) {
+    return Space
+       .update({
+          name: req.params.name || Space.name,
+          description: req.params.description,
+          price: req.params.price,
+        },
+        {
+          where: {
+            id: req.params.id
+          },
+        returning: true
+        })
+      .then(Space => res.send(Space))
+   }, 
 }; 
 
 
