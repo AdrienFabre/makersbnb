@@ -12,7 +12,9 @@ async function getSpaces() {
 
 async function updateSpaces(id) {
   try {
-    const response = await axios.patch(`http://localhost:3000/api/spaces/1/update?name=updatedname&description=firstspace&price=1`)
+    const response = await axios.patch(
+      `http://localhost:3000/api/spaces/1/update?name=updatedname&description=firstspace&price=1`
+    )
     return response
   } catch (error) {
     console.error(error)
@@ -33,6 +35,3 @@ describe('API', () => {
     expect(result.data[0]).toEqual(1)
   })
 })
-
-
-
