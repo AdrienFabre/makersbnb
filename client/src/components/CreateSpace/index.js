@@ -11,12 +11,14 @@ const PageContainer = styled.div`
 
 const PageTitle = props => (
   <div className={props.className}>
-    <h2>{props.title}</h2>
-    <p>{props.description}</p>
+      <h2>{props.title}</h2>
+      <p>{props.description}</p>
+    
   </div>
 );
 
 const StyledPageTitle = styled(PageTitle)`
+  
   background-image: url("https://images.unsplash.com/photo-1495954484750-af469f2f9be5?ixlib");
   background-color: #cccccc;
   height: 500px;
@@ -59,6 +61,11 @@ const Form = props => (
 );
 
 const StyledForm = styled(Form)`
+
+  form {
+    padding-top:6em;
+  }
+
   label {
     font-size: 14px;
     display: block;

@@ -4,23 +4,31 @@ import '@atlaskit/css-reset'
 import { BrowserRouter, Route } from 'react-router-dom'
 
 import Header from './Header'
-import SignUp from './SignUp'
 import Welcome from './Welcome'
 import Spaces from './Spaces'
 import CreateSpace from './CreateSpace'
+import Login from './Login'
 
 const App = () => (
   <BrowserRouter>
     <div>
       <Header />
-      <Welcome />
-      <SignUp />
-      <Route exact={true} path="/spaces" render={props => <Spaces />} />
+      <Route 
+        exact={true} 
+        path="/" 
+        render={props => <Welcome />} />
+      <Route 
+        exact={true} 
+        path="/spaces" 
+        render={props => <Spaces />} />
+      <Route 
+        exact={true} 
+        path="/login" 
+        render={props => <Login />} />
       <Route
         exact={true}
         path="/spaces/create"
-        render={props => <CreateSpace />}
-      />
+        render={props => <CreateSpace />} />
     </div>
   </BrowserRouter>
 )

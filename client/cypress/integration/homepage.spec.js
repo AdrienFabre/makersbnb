@@ -3,17 +3,6 @@ describe("Homepage", () => {
     cy.visit("/");
   });
 
-  it("has the site name", () => {
-    cy.visit("/");
-    cy.contains("Makers BnB");
-  });
-
-  it("can navigate to spaces", () => {
-    cy.visit("/");
-    cy.contains("Spaces").click();
-    cy.url().should("include", "/spaces");
-  });
-
   it("contains signup to makersbnb", () => {
     cy.visit("/");
     cy.contains("Sign up to Makers BnB"); 

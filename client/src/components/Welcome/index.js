@@ -2,6 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
+import SignUp from '../SignUp';
 
 const PageTitle = props => (
     <div className={props.className}>
@@ -37,6 +38,7 @@ const PageTitle = props => (
 const Welcome = () => (
     <React.Fragment>
         <StyledPageTitle title="Feel at home, anywhere" />
+        <SignUp/>
     </React.Fragment>
   );
   export default Welcome;
