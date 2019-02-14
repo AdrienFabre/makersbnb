@@ -3,43 +3,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 
+import PageHero from "../PageHero";
+
 const PageContainer = styled.div`
   max-width: 600px;
   padding: 20px;
   margin: 0 auto;
-`;
-
-const PageTitle = props => (
-  <div className={props.className}>
-      <h2>{props.title}</h2>
-      <p>{props.description}</p>
-    
-  </div>
-);
-
-const StyledPageTitle = styled(PageTitle)`
-  
-  background-image: url("https://images.unsplash.com/photo-1495954484750-af469f2f9be5?ixlib");
-  background-color: #cccccc;
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  h2 {
-    font-size: 8em;
-    color: white;
-  }
-
-  p {
-    color: white;
-    font-size: 1.4em;
-    margin: 2em 1em 1em;
-  }
 `;
 
 const Form = props => (
@@ -61,9 +30,8 @@ const Form = props => (
 );
 
 const StyledForm = styled(Form)`
-
   form {
-    padding-top:6em;
+    padding-top: 6em;
   }
 
   label {
@@ -82,7 +50,9 @@ const StyledForm = styled(Form)`
     font-size: 16px;
     margin-bottom: 20px;
     border: 2px solid #cccacb;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
   }
 
   input:focus,
@@ -99,25 +69,30 @@ const StyledForm = styled(Form)`
     width: 100%;
   }
 
-  input[type='submit']:hover {
+  input[type="submit"]:hover {
     background-color: #b74b6e;
     border: 2px solid #b74b6e;
     color: white;
     width: 100%;
     border-radius: 7px;
     cursor: pointer;
-  
   }
 `;
 
 const CreateSpace = () => (
   <React.Fragment>
-    <StyledPageTitle title="List a Space" description="A description" />
+    <PageHero
+      title="List a Space"
+      description="A description"
+      image="https://images.unsplash.com/photo-1495954484750-af469f2f9be5?ixlib"
+    />
+
     <PageContainer>
       <StyledForm />
     </PageContainer>
   </React.Fragment>
 );
+
 export default CreateSpace;
 
 const ListingContainer = styled.div``;
