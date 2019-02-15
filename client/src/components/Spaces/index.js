@@ -1,13 +1,16 @@
 /* eslint-disable react/jsx-filename-extension */
-import React from 'react'
-import axios from 'axios'
 
+import React from "react";
+import ReactDOM from "react-dom";
+import styled from "styled-components";
 import styled from 'styled-components'
+
+import PageHero from "../PageHero";
+import StyledPageContainer from "../PageContainer";
 
 const Hero = props => (
   <div className={props.className}>
     <h2>Book a Space</h2>
-
     <a href="/spaces/create">List a Space</a>
   </div>
 )
@@ -91,6 +94,7 @@ const ListingContainer = styled.div`
   margin: 3em;
   border: 2px solid palevioletred;
 `
+
 
 class Spaces extends React.Component {
   state = { spaces: null }

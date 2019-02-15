@@ -1,15 +1,15 @@
 /* eslint-disable react/jsx-filename-extension */
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-import Nav from '../Nav'
+import Nav from "../Nav";
 
 const Header = props => (
-  <div className={props.className}>
+  <header className={props.className}>
     <h1>Makers BnB</h1>
     <Nav />
-  </div>
-)
+  </header>
+);
 
 const StyledHeader = styled(Header)`
   display: flex;
@@ -19,6 +19,6 @@ const StyledHeader = styled(Header)`
   h1 {
     font-size: 18px;
   }
-`
+`;
 
-export default StyledHeader
+export default StyledHeader;
