@@ -6,8 +6,14 @@ import styled from "styled-components";
 const Nav = props => (
   <nav className={props.className}>
     <ul>
+    <li>
+        <a href="/">About</a>
+      </li>
       <li>
         <a href="/spaces">Spaces</a>
+      </li>
+      <li>
+        <a href="/login">Login</a>
       </li>
     </ul>
   </nav>
@@ -17,6 +23,16 @@ const StyledNav = styled(Nav)`
   justify-content: flex-end;
   ul {
     list-style: none;
+  }
+
+  ul li {
+    display: inline-block;
+    margin-right: 10px;
+    
+  }
+
+  ul li:last-of-type {
+    margin-right: 0;
   }
 
   ul li a {
