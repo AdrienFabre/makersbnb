@@ -22,14 +22,22 @@ const StyledPageHero = styled(PageHero)`
   justify-content: center;
 
   h2 {
-    font-size: 8em;
+    font-size: 7em;
     color: white;
+    text-align: center;
   }
 
   p {
     color: white;
     font-size: 1.4em;
     margin: 2em 1em 1em;
+  }
+
+  @media only screen and (max-width: 600px) {
+    h2 {
+      font-size: 4em;
+      padding: 20px;
+    }
   }
 `;
 

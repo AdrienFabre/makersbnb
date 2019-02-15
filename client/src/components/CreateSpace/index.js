@@ -25,24 +25,6 @@ const CreateInputs = props => (
   </div>
 );
 
-const StyledCreateInputs = styled(CreateInputs)``;
-
-// const CreateSpace = () => (
-//   <React.Fragment>
-//     <PageHero
-//       title="List a Space"
-//       description="A description"
-//       image="https://images.unsplash.com/photo-1495954484750-af469f2f9be5?ixlib"
-//     />
-
-//     <StyledPageContainer>
-//       <StyledForm>
-//         <StyledCreateInputs />
-//       </StyledForm>
-//     </StyledPageContainer>
-//   </React.Fragment>
-// );
-
 class CreateSpace extends React.Component {
   state = {};
 
@@ -52,12 +34,11 @@ class CreateSpace extends React.Component {
         <PageHero
           title="List a Space"
           description="A description"
-          image="https://images.unsplash.com/photo-1495954484750-af469f2f9be5?ixlib"
+          image="https://images.unsplash.com/photo-1529089202281-2180f7a2289c?ixlib"
         />
-
         <StyledPageContainer>
           <StyledForm>
-            <StyledCreateInputs />
+            <CreateInputs />
           </StyledForm>
         </StyledPageContainer>
       </React.Fragment>

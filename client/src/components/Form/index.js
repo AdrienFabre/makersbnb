@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const StyledForm = styled.div`
   form {
-    padding-top: 6em;
+    padding: 6em 0;
   }
 
   label {
