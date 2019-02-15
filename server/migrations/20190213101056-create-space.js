@@ -1,7 +1,7 @@
-'use strict'
+"use strict";
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('spaces', {
+    return queryInterface.createTable("spaces", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -18,10 +18,10 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       startDate: {
-        type: Sequelize.INTEGER
+        type: Sequelize.DATE
       },
       endDate: {
-        type: Sequelize.INTEGER
+        type: Sequelize.DATE
       },
       createdAt: {
         allowNull: false,
@@ -31,9 +31,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
-    })
+    });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('spaces')
+    return queryInterface.dropTable("spaces");
   }
-}
+};
