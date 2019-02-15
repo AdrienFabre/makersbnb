@@ -1,3 +1,6 @@
+
+.DS_Store
+client/dist
+CONTRIBUTING.md
 node_modules
 client/dist
-.DS_Store
