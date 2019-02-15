@@ -4,14 +4,10 @@ import ReactDOM from "react-dom";
 import styled from "styled-components";
 
 import PageHero from "../PageHero";
+import StyledPageContainer from "../PageContainer";
+import StyledForm from "../Form";
 
-const PageContainer = styled.div`
-  max-width: 600px;
-  padding: 20px;
-  margin: 0 auto;
-`;
-
-const Form = props => (
+const CreateInputs = props => (
   <div className={props.className}>
     <form action="">
       <label>Name:</label>
@@ -29,55 +25,7 @@ const Form = props => (
   </div>
 );
 
-const StyledForm = styled(Form)`
-  form {
-    padding-top: 6em;
-  }
-
-  label {
-    font-size: 14px;
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 500;
-  }
-
-  input,
-  textarea {
-    padding: 10px;
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    font-size: 16px;
-    margin-bottom: 20px;
-    border: 2px solid #cccacb;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-      "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue",
-      sans-serif;
-  }
-
-  input:focus,
-  textarea:focus {
-    border: 2px solid palevioletred;
-    outline: none;
-  }
-
-  input[type="submit"] {
-    background-color: palevioletred;
-    border: 2px solid palevioletred;
-    color: white;
-    border-radius: 7px;
-    width: 100%;
-  }
-
-  input[type="submit"]:hover {
-    background-color: #b74b6e;
-    border: 2px solid #b74b6e;
-    color: white;
-    width: 100%;
-    border-radius: 7px;
-    cursor: pointer;
-  }
-`;
+const StyledCreateInputs = styled(CreateInputs)``;
 
 const CreateSpace = () => (
   <React.Fragment>
@@ -87,9 +35,11 @@ const CreateSpace = () => (
       image="https://images.unsplash.com/photo-1495954484750-af469f2f9be5?ixlib"
     />
 
-    <PageContainer>
-      <StyledForm />
-    </PageContainer>
+    <StyledPageContainer>
+      <StyledForm>
+        <StyledCreateInputs />
+      </StyledForm>
+    </StyledPageContainer>
   </React.Fragment>
 );
 

@@ -3,11 +3,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
 
-const PageContainer = styled.div`
-  max-width: 600px;
-  padding: 20px;
-  margin: 0 auto;
-`;
+import StyledPageContainer from "../PageContainer";
 
 const SignUpForm = props => (
   <div className={props.className}>
@@ -41,7 +37,9 @@ const StyledSignUpForm = styled(SignUpForm)`
     font-size: 16px;
     margin-bottom: 20px;
     border: 2px solid #cccacb;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
   }
 
   input:focus,
@@ -58,33 +56,28 @@ const StyledSignUpForm = styled(SignUpForm)`
     width: 100%;
   }
 
-  input[type='submit']:hover {
+  input[type="submit"]:hover {
     background-color: #b74b6e;
     border: 2px solid #b74b6e;
     color: white;
     width: 100%;
     border-radius: 7px;
     cursor: pointer;
-  
   }
 
   h3 {
     font-size: 2em;
-    color: #172B4D;
+    color: #172b4d;
     text-align: center;
     padding: 2em 0 2em 0;
   }
 `;
 
-
 const SignUp = () => (
-    <React.Fragment>
-      <PageContainer>
-        <StyledSignUpForm />
-      </PageContainer>
-    </React.Fragment>
-  );
-  export default SignUp;
-
-
-  
+  <React.Fragment>
+    <StyledPageContainer>
+      <StyledSignUpForm />
+    </StyledPageContainer>
+  </React.Fragment>
+);
+export default SignUp;

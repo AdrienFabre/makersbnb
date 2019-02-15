@@ -1,51 +1,16 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from "react";
 import ReactDOM from "react-dom";
+import styled from "styled-components";
+
+import PageHero from "../PageHero";
+import StyledPageContainer from "../PageContainer";
 
 import {
   DateRangePicker,
   SingleDatePicker,
   DayPickerRangeController
 } from "react-dates";
-
-import styled from "styled-components";
-
-const PageContainer = styled.div`
-  max-width: 600px;
-  padding: 20px;
-  margin: 0 auto;
-`;
-
-const SpaceHero = props => (
-  <div className={props.className}>
-    <h2>{props.title}</h2>
-    <p>{props.description}</p>
-  </div>
-);
-
-const StyledSpaceHero = styled(SpaceHero)`
-  background-image: url("https://images.unsplash.com/photo-1474874055390-459bc92357f3?ixlib");
-  background-color: #cccccc;
-  height: 500px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  h2 {
-    font-size: 5em;
-    color: white;
-  }
-
-  p {
-    color: white;
-    font-size: 1.4em;
-    margin: 2em 1em 1em;
-  }
-`;
 
 const RequestForm = props => (
   <div className={props.className}>
@@ -122,14 +87,15 @@ const Calender = props => (
 
 const SpacesID = () => (
   <React.Fragment>
-    <StyledSpaceHero
+    <PageHero
       title="A Beautiful Relaxing Space"
       description="A description, description, description, description, description."
+      image="https://images.unsplash.com/photo-1474874055390-459bc92357f3?ixlib"
     />
-    <PageContainer>
+    <StyledPageContainer>
       <Calender />
       <StyledRequestForm />
-    </PageContainer>
+    </StyledPageContainer>
   </React.Fragment>
 );
 

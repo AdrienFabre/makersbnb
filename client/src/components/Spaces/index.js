@@ -1,13 +1,14 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from "react";
 import ReactDOM from "react-dom";
-
 import styled from "styled-components";
+
+import PageHero from "../PageHero";
+import StyledPageContainer from "../PageContainer";
 
 const Hero = props => (
   <div className={props.className}>
     <h2>Book a Space</h2>
-
     <a href="/spaces/create">List a Space</a>
   </div>
 );
@@ -95,7 +96,7 @@ const ListingContainer = styled.div`
 const Spaces = () => (
   <React.Fragment>
     <StyledHero />
-    <ListingContainer>
+    <StyledPageContainer>
       <StyledListing
         title="A Beautiful Relaxing Space"
         description="A description, description, description, description, description."
@@ -108,7 +109,7 @@ const Spaces = () => (
         title="Another Beautiful Relaxing Place"
         description="A description"
       />
-    </ListingContainer>
+    </StyledPageContainer>
   </React.Fragment>
 );
 
