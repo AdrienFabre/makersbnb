@@ -27,21 +27,43 @@ const CreateInputs = props => (
 
 const StyledCreateInputs = styled(CreateInputs)``;
 
-const CreateSpace = () => (
-  <React.Fragment>
-    <PageHero
-      title="List a Space"
-      description="A description"
-      image="https://images.unsplash.com/photo-1495954484750-af469f2f9be5?ixlib"
-    />
+// const CreateSpace = () => (
+//   <React.Fragment>
+//     <PageHero
+//       title="List a Space"
+//       description="A description"
+//       image="https://images.unsplash.com/photo-1495954484750-af469f2f9be5?ixlib"
+//     />
 
-    <StyledPageContainer>
-      <StyledForm>
-        <StyledCreateInputs />
-      </StyledForm>
-    </StyledPageContainer>
-  </React.Fragment>
-);
+//     <StyledPageContainer>
+//       <StyledForm>
+//         <StyledCreateInputs />
+//       </StyledForm>
+//     </StyledPageContainer>
+//   </React.Fragment>
+// );
+
+class CreateSpace extends React.Component {
+  state = {};
+
+  render() {
+    return (
+      <React.Fragment>
+        <PageHero
+          title="List a Space"
+          description="A description"
+          image="https://images.unsplash.com/photo-1495954484750-af469f2f9be5?ixlib"
+        />
+
+        <StyledPageContainer>
+          <StyledForm>
+            <StyledCreateInputs />
+          </StyledForm>
+        </StyledPageContainer>
+      </React.Fragment>
+    );
+  }
+}
 
 export default CreateSpace;
 
