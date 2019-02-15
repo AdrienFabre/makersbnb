@@ -4,8 +4,9 @@ import ReactDOM from "react-dom";
 import styled from "styled-components";
 
 import StyledPageContainer from "../PageContainer";
+import StyledForm from "../Form";
 
-const SignUpForm = props => (
+const SignUpInputs = props => (
   <div className={props.className}>
     <h3> Sign up to Makers BnB </h3>
     <form action="">
@@ -20,7 +21,7 @@ const SignUpForm = props => (
   </div>
 );
 
-const StyledSignUpForm = styled(SignUpForm)`
+const StyledSignUpInputs = styled(SignUpInputs)`
   label {
     font-size: 14px;
     display: block;
@@ -76,7 +77,9 @@ const StyledSignUpForm = styled(SignUpForm)`
 const SignUp = () => (
   <React.Fragment>
     <StyledPageContainer>
-      <StyledSignUpForm />
+      <StyledForm>
+        <StyledSignUpInputs />
+      </StyledForm>
     </StyledPageContainer>
   </React.Fragment>
 );
