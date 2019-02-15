@@ -1,7 +1,9 @@
 /* eslint-disable react/jsx-filename-extension */
+
 import React from "react";
 import ReactDOM from "react-dom";
 import styled from "styled-components";
+import styled from 'styled-components'
 
 import PageHero from "../PageHero";
 import StyledPageContainer from "../PageContainer";
@@ -11,10 +13,10 @@ const Hero = props => (
     <h2>Book a Space</h2>
     <a href="/spaces/create">List a Space</a>
   </div>
-);
+)
 
 const StyledHero = styled(Hero)`
-  background-image: url("https://images.unsplash.com/photo-1533667586627-9f5ddbd42539?ixlib");
+  background-image: url('https://images.unsplash.com/photo-1533667586627-9f5ddbd42539?ixlib');
   background-color: #cccccc;
   height: 500px;
   background-position: center;
@@ -40,17 +42,17 @@ const StyledHero = styled(Hero)`
     padding: 0.8em 1.2em 0em;
     border-radius: 3px;
   }
-`;
+`
 
 const Listing = props => (
   <div className={props.className}>
     <h3>{props.title}</h3>
     <p>{props.description}</p>
   </div>
-);
+)
 
 const StyledListing = styled(Listing)`
-  background-image: url("https://images.unsplash.com/photo-1474874055390-459bc92357f3?ixlib");
+  background-image: url('https://images.unsplash.com/photo-1474874055390-459bc92357f3?ixlib');
   background-color: #cccccc;
   width: 90%;
   margin: 3em 0 3em;
@@ -82,7 +84,7 @@ const StyledListing = styled(Listing)`
     background-color: palevioletred;
     margin: 1em 0em 1em 3em;
   }
-`;
+`
 
 const ListingContainer = styled.div`
   display: flex;
@@ -91,26 +93,40 @@ const ListingContainer = styled.div`
   justify-content: center;
   margin: 3em;
   border: 2px solid palevioletred;
-`;
+`
 
-const Spaces = () => (
-  <React.Fragment>
-    <StyledHero />
-    <StyledPageContainer>
-      <StyledListing
-        title="A Beautiful Relaxing Space"
-        description="A description, description, description, description, description."
-      />
-      <StyledListing
-        title="Another Beautiful Relaxing Place"
-        description="A description"
-      />
-      <StyledListing
-        title="Another Beautiful Relaxing Place"
-        description="A description"
-      />
-    </StyledPageContainer>
-  </React.Fragment>
-);
 
-export default Spaces;
+class Spaces extends React.Component {
+  state = { spaces: null }
+
+  componentWillMount() {
+    fetch('http://localhost:3000/api/spaces')
+      .then(response => response.json())
+      .then(json => {
+        const spaces = json
+        this.setState({ spaces })
+      })
+  }
+
+  render() {
+    return (
+      <React.Fragment>
+        <StyledHero />
+        <ListingContainer>
+          {this.state.spaces &&
+            this.state.spaces.map((space, index) => {
+              return (
+                <StyledListing
+                  key={index}
+                  title={space.name}
+                  description={space.description}
+                />
+              )
+            })}
+        </ListingContainer>
+      </React.Fragment>
+    )
+  }
+}
+
+export default Spaces

@@ -1,5 +1,6 @@
+
 .DS_Store
 client/dist
 CONTRIBUTING.md
-node_modules
+node_modules/*
 client/dist
