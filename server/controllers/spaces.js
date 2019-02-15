@@ -16,9 +16,9 @@ module.exports = {
   update(req, res) {
     return Space.update(
       {
-        name: req.params.name || Space.name,
-        description: req.params.description,
-        price: req.params.price
+        name: req.body.name || Space.name,
+        description: req.body.description,
+        price: req.body.price
       },
       {
         where: {
